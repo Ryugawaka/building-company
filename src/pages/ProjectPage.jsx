@@ -5,8 +5,10 @@ import { projects } from "../mocks/projects";
 const ProjectPage = () => {
   const params = useParams();
   const navigate = useNavigate();
+//   достает проект по id из записей
   const project = projects.filter((p) => p.id === params.id);
 
+//   при переходе на страницу проверяет есть ли проект с id в записях, если нет переводит на 404 страницу
   useEffect(() => {
     project.length < 1 && navigate("error/404");
   });

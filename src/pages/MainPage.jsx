@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 const MainPage = () => {
   const [filteredProjects, setFilteredProjects] = useState(projects);
 
+// фильтрует проекты по городам, при выборе варианта "Все", выводит все записи
   const handleFilter = (e) => {
     if (e.target.value === "Все") {
       setFilteredProjects(projects);
@@ -12,14 +13,15 @@ const MainPage = () => {
       setFilteredProjects(projects.filter((p) => p.city === e.target.value));
     }
   };
+//   поиск в записях по названию проекта, если строка поиска пустая показываются все записи
 const handleSearch = (e) => {
-    if (e.target.value === "Все") {
+    if (e.target.value === "") {
         setFilteredProjects(projects);
       } else {
         setFilteredProjects(projects.filter((p) => p.name.toLowerCase().includes(e.target.value.toLowerCase())));
       }
 }
-
+// функция рендера проектов из записей
 const renderProjects = () => {
     if (filteredProjects.length > 0) {
         return (<div className="flex flex-wrap gap-[4vw] justify-between">

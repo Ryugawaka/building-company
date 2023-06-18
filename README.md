@@ -2,6 +2,32 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Список для установки :
+
+https://nodejs.org/en node js
+
+yarn под свою ОС:
+
+https://github.com/yarnpkg/yarn/releases/download/v1.22.4/yarn-1.22.4.msi - yarn windows
+
+https://classic.yarnpkg.com/lang/en/docs/install/#mac-stable - yarn macOS
+
+## порядок запуска после клонирования проекта:
+
+yarn для установки библиотек
+
+yarn start для запуска проекта
+
+## список используемых библиотек:
+
+tailwind - для стилизации компонентов внутри не используя СSS
+
+react-router-dom - для роутинга/создания страниц
+
+## Данные:
+
+список проектов хранится по пути src/mocks/projescts.js
+
 ## Available Scripts
 
 In the project directory, you can run:
